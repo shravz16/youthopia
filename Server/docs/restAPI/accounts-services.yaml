@@ -1,0 +1,338 @@
+openapi: 3.1.0
+info:
+  title: The Youthopia
+  summary: The Rest Service for Youthopia.
+  version: 'v1.0'
+servers:
+  - url: http://localhost:3001
+
+paths:
+  /home:
+    get:
+          operationId: home
+          description: home page of the application
+  /createAccount:
+    get:
+          operationId: get-create account page
+          description: get the youth/volunteer accounts
+      
+  /accounts/youth:
+    post:
+      operationId: create-accounts
+      description: creates the youth accounts
+      requestBody:
+        required: true
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/youth'
+      responses:
+        200:
+          description: Successfully saved
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Success'
+
+        401:
+          description: Unauthenticated request
+          content:
+            'applicaation/json':
+              schema:
+               $ref: '#/components/schemas/Error' 
+    put:
+          operationId: update-account
+          description: update the youth/volunteer accounts
+          requestBody:
+            required: true
+            content:
+              'application/json':
+                schema:
+                  $ref: '#/components/schemas/account'
+          responses:
+            200:
+              description: Successfully saved
+              content:
+                'application/json':
+                  schema:
+                    $ref: '#/components/schemas/Success'
+
+            401:
+              description: Unauthenticated request
+              content:
+                'application/json':
+                  schema: 
+                    $ref: '#/components/schemas/Error'
+  
+    get:
+          operationId: get-account
+          description: get the youth/volunteer accounts
+          
+          parameters: 
+            - name: accountId
+              in: query
+              required: true
+              schema:
+                type : integer
+                format: int64
+                minimum: 1       
+    delete:
+          operationId: delete-account
+          description: delete the youth/volunteer accounts
+          
+          parameters: 
+            - name: accountId
+              in: query
+              required: true
+              schema:
+                type : integer
+                format: int64
+                minimum: 1
+  /accounts/volunteer:
+    post:
+      operationId: create-accounts-volunteer
+      description: creates the youth accounts
+      requestBody:
+        required: true
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/volunteer'
+      responses:
+        200:
+          description: Successfully saved
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Success'
+
+        401:
+          description: Unauthenticated request
+          content:
+            'applicaation/json':
+              schema:
+               $ref: '#/components/schemas/Error' 
+    put:
+          operationId: update-account-volunteer
+          description: update the volunteer accounts
+          requestBody:
+            required: true
+            content:
+              'application/json':
+                schema:
+                  $ref: '#/components/schemas/volunteer'
+          responses:
+            200:
+              description: Successfully saved
+              content:
+                'application/json':
+                  schema:
+                    $ref: '#/components/schemas/Success'
+
+            401:
+              description: Unauthenticated request
+              content:
+                'application/json':
+                  schema: 
+                    $ref: '#/components/schemas/Error'
+  
+    get:
+          operationId: get-account-volunteer
+          description: get the volunteer accounts
+          
+          parameters: 
+            - name: volunteerAccountId
+              in: query
+              required: true
+              schema:
+                type : integer
+                format: int64
+                minimum: 1       
+    delete:
+          operationId: delete-account-volunteer
+          description: delete the volunteer accounts
+          
+          parameters: 
+            - name: volunteerAccountId
+              in: query
+              required: true
+              schema:
+                type : integer
+                format: int64
+                minimum: 1
+  /login:
+    post:
+      operationId: login
+      description: login to accounts
+      requestBody:
+        required: true
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/login'
+      responses:
+        200:
+          description: Successfully saved
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Success'
+
+        401:
+          description: Unauthenticated request
+          content:
+            'applicaation/json':
+              schema:
+               $ref: '#/components/schemas/Error'
+    get:
+      operationId: login page
+      description: show the login page to login to the application           
+components: 
+  schemas:
+    login:
+      type: object
+      properties:
+        action:
+          type: string
+          examples:
+            - login
+        id:
+          type: string
+          examples:
+            - 192.168.1.1_login
+        data:
+          type: object
+          properties:
+            email:
+              type: string
+              examples: 
+                - joedoe@gmail.com
+            password:
+              type: string
+              examples:
+                - '*********'          
+    youth:
+      type: object
+      properties:
+        action:
+          type: string
+          examples: 
+            - profile
+        id:
+          type: string
+          examples:
+            - 192.168.1.1_youth
+        data:
+          type: object
+          properties: 
+            
+            profile_data:
+              type: object
+              properties:
+                full_name:
+                  type: string
+                  examples:
+                    - Joe Doe
+                user_name:
+                  type: string
+                  examples:
+                    - x_Joe_Doe_x
+                about:
+                  type: string
+                  examples:
+                    - A 19 year old sophomore
+                email_address:
+                  type: string
+                  examples:
+                    - joedoe@gmail.com
+                age:
+                  type: integer
+                  examples:
+                    - 19
+                sex:
+                  type: string
+                  examples:
+                    - male
+                phone:
+                  type: integer
+                  examples:
+                    - 4124124515
+                race:
+                  type: string
+                  examples:
+                    - american
+                org:
+                  type: string
+                  examples:
+                    - high school
+                occupation:
+                  type: string
+                  examples:
+                    - student
+    volunteer:
+      type: object
+      properties:
+        action:
+          type: string
+          examples: 
+            - profile
+        id:
+          type: string
+          examples:
+            - 192.168.1.1_volunteer
+        data:
+          type: object
+          properties: 
+            
+            profile_data:
+              type: object
+              properties:
+                full_name:
+                  type: string
+                  examples:
+                    - Joe Doe
+                user_name:
+                  type: string
+                  examples:
+                    - x_Joe_Doe_x
+                email_address:
+                  type: string
+                  examples:
+                    - joedoe@gmail.com
+                phone:
+                  type: integer
+                  examples:
+                    - 4124124515     
+    Success:
+      type: object
+      properties:
+        code:
+          type: integer 
+          examples:
+            - 200
+        data:
+          type: object
+          properties:
+            message:
+              type: string
+              examples:
+                - successfully logged
+            accountId:
+              type: integer 
+              examples:
+                - 1294124512         
+           
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          examples:
+            - 401
+        data:
+          type: object
+          properties:
+            message:
+              type: string
+              examples:
+                - unauthorized

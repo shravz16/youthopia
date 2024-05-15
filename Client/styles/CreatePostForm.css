@@ -1,0 +1,42 @@
+
+.open-form-button {
+  position: fixed;
+  bottom: 60px;
+  right: 80px;
+  padding: 20px 30px;
+  background-color: #2f52a1;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.create-post {
+  position: fixed;
+  right: 20px;
+  bottom: 60px;
+  background: aliceblue;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.create-post input,
+.create-post textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.create-post button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #2f52a1;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}

@@ -1,0 +1,399 @@
+openapi: 3.1.0
+info:
+  title: The Youthopia
+  summary: The Rest Service for Youthopia.
+  version: 'v1.0'
+servers:
+  - url: http://localhost:3001
+
+paths:
+  /news:
+    post:
+      operationId: create-news
+      description: Create a news item.
+      requestBody:
+        required: true
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/News'
+      responses:
+        200:
+          description: News item successfully created.
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Success'
+        401:
+          description: Unauthenticated request.
+          content:
+            'application/json':
+              schema:
+               $ref: '#/components/schemas/Error'
+
+
+                
+    get:
+      operationId: get-news
+      description: Retrieve a list of news items.
+      responses:
+        200:
+          description: Successfully retrieved news items.
+          content:
+            'application/json':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/News'
+        401:
+          description: Unauthenticated request.
+          content:
+            'application/json':
+              schema:
+               $ref: '#/components/schemas/Error'
+    put:
+      operationId: update-news
+      description: Update a news item.
+      requestBody:
+        required: true
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/News'
+      responses:
+        200:
+          description: News item successfully updated.
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Success'
+        401:
+          description: Unauthenticated request.
+          content:
+            'application/json':
+              schema:
+               $ref: '#/components/schemas/Error'
+    delete:
+      operationId: delete-news
+      description: Delete a news item.
+      parameters:
+        - name: newsId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: News item successfully deleted.
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Success'
+        401:
+          description: Unauthenticated request.
+          content:
+            'application/json':
+              schema:
+                $ref : '#/components/schemas/Error'
+  /skills:
+      post:
+        operationId: create-skill
+        description: Create a new skill in the system.
+        requestBody:
+          required: true
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Skill'
+        responses:
+          200:
+            description: Skill successfully created.
+            content:
+              'application/json':
+                schema:
+                  $ref: '#/components/schemas/Success'
+          401:
+            description: Unauthenticated request.
+            content:
+              'application/json':
+                schema:
+                  $ref: '#/components/schemas/Error'
+      put:
+        operationId: update-skill
+        description: Update a new skill in the system.
+        requestBody:
+          required: true
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Skill'
+        responses:
+          200:
+            description: Skill successfully created.
+            content:
+              'application/json':
+                schema:
+                  $ref: '#/components/schemas/Success'
+          401:
+            description: Unauthenticated request.
+            content:
+              'application/json':
+                schema:
+                  $ref: '#/components/schemas/Error'
+      get:
+        operationId: get-all-skills
+        description: Retrieve all skills from the system.
+        responses:
+          200:
+            description: Successfully retrieved all skills.
+            content:
+              'application/json':
+                schema:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Skill'
+          401:
+            description: Unauthenticated request.
+            content:
+              'application/json':
+                schema:
+                  $ref : '#/components/schemas/Error'
+      delete:
+        operationId: delete-all-skills
+        description: Delete  all skills from the system.
+        responses:
+          200:
+            description: Successfully retrieved all skills.
+            content:
+              'application/json':
+                schema:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Skill'
+          401:
+            description: Unauthenticated request.
+            content:
+              'application/json':
+                schema:
+                  $ref : '#/components/schemas/Error'
+
+  /health:
+    post:
+      operationId: create-health-issue
+      description: Add a health issue to the system.
+      requestBody:
+        required: true
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/Health'
+      responses:
+        200:
+          description: Health issue successfully added.
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Success'
+        401:
+          description: Unauthenticated request.
+          content:
+            'application/json':
+              schema:
+               $ref: '#/components/schemas/Error'
+    put:
+      operationId: update-health-issue
+      description: Update a health issue to the system.
+      requestBody:
+        required: true
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/Health'
+      responses:
+        200:
+          description: Health issue successfully added.
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Success'
+        401:
+          description: Unauthenticated request.
+          content:
+            'application/json':
+              schema:
+               $ref: '#/components/schemas/Error'
+    get:
+      operationId: get-all-health-issues
+      description: Retrieve all health issues from the system.
+      responses:
+        200:
+          description: Successfully retrieved all health issues.
+          content:
+            'application/json':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Health'
+        401:
+          description: Unauthenticated request.
+          content:
+            'application/json':
+              schema:
+               $ref: '#/components/schemas/Error'
+    delete:
+      operationId: delete-health-issues
+      description: Delete all health issues from the system.
+      responses:
+        200:
+          description: Successfully retrieved all health issues.
+          content:
+            'application/json':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Health'
+        401:
+          description: Unauthenticated request.
+          content:
+            'application/json':
+              schema:
+               $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    News:
+      type: object
+      properties:
+        action:
+          type: string
+          examples:
+            - News
+        id:
+          type: string
+          examples:
+            - 192.168.1.1_youth
+        data:
+          type: object
+          properties:
+            News_data:
+              type: object
+              properties:
+                NewsId:
+                  type: string
+                  examples: 
+                    - news_12345
+                NewsTitle:
+                  type: string
+                  examples: 
+                    - Youthopia Opens New Community Center
+                NewsContent:
+                  type: string
+                  examples: 
+                    - The new community center will have...
+          
+    Skill:
+      type: object
+      properties:
+          action:
+            type: string
+            examples:
+              - Skill
+          id:
+            type: string
+            examples:
+              - 192.168.1.1_youth
+          data:
+            type: object
+            properties:
+              Skill_data:
+                type: object
+                properties:
+                  SkillId:
+                    type: string
+                    examples: 
+                      - skill_12345
+                  SkillTitle:
+                    type: string
+                    examples: 
+                      - Youthopia Opens New Community Center
+                  SkillContent:
+                    type: string
+                    examples: 
+                      - The new community center will have...
+
+    Health:
+     type: object
+     properties:
+        action:
+          type: string
+          examples:
+            - Health
+        id:
+          type: string
+          examples:
+            - 192.168.1.1_youth
+        data:
+          type: object
+          properties:
+            Health_data:
+              type: object
+              properties:
+                HealthId:
+                  type: string
+                  examples: 
+                    - Health_12345
+                HealthTitle:
+                  type: string
+                  examples: 
+                    - Youthopia Opens New Community Center
+                HealthContent:
+                  type: string
+                  examples: 
+                  - The new community center will have...
+
+                  YouthId:
+                     type: integer
+                     examples:
+                         - 123456
+                  
+                    
+
+                       
+
+                    
+
+                
+
+    Success:
+      type: object
+      properties:
+        code:
+          type: integer 
+          examples : 
+            - 200
+        data:
+          type: object
+          properties:
+            message:
+              type: string
+              examples: 
+                - Request successful
+            updateId:
+              type: integer 
+              examples : 
+                - 1294124512
+
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          examples:
+            -  401
+        data:
+          type: object
+          properties:
+            message:
+              type: string
+              examples:
+                - Authentication failed

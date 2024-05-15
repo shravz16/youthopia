@@ -1,0 +1,164 @@
+openapi: 3.1.0
+info:
+  title: The Youthopia
+  summary: The Rest Service for Youthopia.
+  version: 'v1.0'
+servers:
+  - url: http://localhost:3001
+
+paths:
+  /forums/posts:
+    post:
+      operationId: create-posts
+      description: creates posts in the forum
+      requestBody:
+        required: true
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/Post'
+      responses:
+        200:
+          description: Successfully saved
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Success'
+
+        401:
+          description: Unauthenticated request
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Error'
+
+    put:
+      operationId: update-post
+      description: update the posts
+      requestBody:
+        required: true
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/Post'
+      responses:
+        200:
+          description: Successfully saved
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Success'
+
+        401:
+          description: Unauthenticated request
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Error'
+
+    get:
+      operationId: get-post
+      description: get the posts
+      parameters:
+        - name: postId
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+
+    delete:
+      operationId: delete-post
+      description: delete the posts
+      parameters:
+        - name: postId
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+
+components:
+  schemas:
+    Post:
+      type: object
+      properties:
+        action:
+          type: string
+          examples:
+            - post
+        id:
+          type: string
+          examples:
+            - 192.168.1.1_youth
+        data:
+          type: object
+          properties:
+            post_data:
+              type: object
+              properties:
+                title:
+                  type: string
+                  examples:
+                    - How to learn Python
+                date:
+                  type: string
+                  examples:
+                    - 19/03/2024
+                description:
+                  type: string
+                  examples:
+                    - Looking for people to help me with Python
+                youthId:
+                  type: integer
+                  examples:
+                    - 11111
+                likes:
+                  type: integer
+                  examples:
+                    - 19
+                postId:
+                  type: integer
+                  examples:
+                    - 20113
+                comments:
+                  type: object
+                  examples:
+                    - ['This is awesome!','I like this!']
+
+    Success:
+      type: object
+      properties:
+        code:
+          type: integer
+          examples:
+            - 200
+        data:
+          type: object
+          properties:
+            message:
+              type: string
+              examples:
+                - successfully logged
+            postId:
+              type: integer
+              examples:
+                - 1294124512
+
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          examples:
+            - 401
+        data:
+          type: object
+          properties:
+            message:
+              type: string
+              examples:
+                -
+ 

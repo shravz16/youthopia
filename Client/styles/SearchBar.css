@@ -1,0 +1,32 @@
+
+.search-bar-container {
+  padding: 20px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+hr{
+  color: #2f52a1;
+}
+
+.search-bar {
+  font-family: "Inter",sans-serif;
+  
+  margin-left: 8%;
+  margin-bottom: 5%;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #2f52a1;
+  outline: none;
+}
+
+.search-bar:focus {
+  border-color: #2f52a1;
+}
+
+#search-btn-discussion{
+  background-color: #2f52a1;
+  margin-left: 1%;
+  color: #fff;
+  
+}

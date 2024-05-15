@@ -1,0 +1,247 @@
+openapi: 3.1.0
+info:
+  title: The Youthopia
+  summary: The Rest Service for Youthopia.
+  version: 'v1.0'
+servers:
+  - url: http://localhost:3001
+
+paths:
+  
+  /volunteer/activity :
+    post:
+      operationId: create-activity
+      description: creates the activity for youth/volunteer  
+      requestBody:
+        required: true
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/activity'
+      responses:
+        200:
+          description: Successfully saved
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Success'
+
+        401:
+          description: Unauthenticated request
+          content:
+            'applicaation/json':
+              schema:
+               $ref: '#/components/schemas/Error' 
+    put:
+          operationId: update-activity
+          description: update the youth/volunteer activity
+          requestBody:
+            required: true
+            content:
+              'application/json':
+                schema:
+                  $ref: '#/components/schemas/activity'
+          responses:
+            200:
+              description: Successfully saved
+              content:
+                'application/json':
+                  schema:
+                    $ref: '#/components/schemas/Success'
+
+            401:
+              description: Unauthenticated request
+              content:
+                'application/json':
+                  schema: 
+                    $ref: '#/components/schemas/Error'
+  
+    get:
+          operationId: get-activity
+          description: get the youth/volunteer activity
+          
+          parameters: 
+            - name: activity_id
+              in: query
+              required: true
+              schema:
+                type : integer
+                format: int64
+                minimum: 1       
+    delete:
+          operationId: delete-activity
+          description: delete the youth/volunteer accounts
+          
+          parameters: 
+            - name: activity_id
+              in: query
+              required: true
+              schema:
+                type : integer
+                format: int64
+                minimum: 1
+  /Volunteer/Camp:
+    post:
+      operationId: organise-camp
+      description: we are orgainzing the camp 
+      requestBody:
+        required: true
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/Camp'
+      responses:
+        200:
+          description: Successfully saved
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Success'
+
+        401:
+          description: Unauthenticated request
+          content:
+            'applicaation/json':
+              schema:
+               $ref: '#/components/schemas/Error' 
+    put:
+          operationId: update-Camp
+          description: update the details of our camp
+          requestBody:
+            required: true
+            content:
+              'application/json':
+                schema:
+                  $ref: '#/components/schemas/Camp'
+          responses:
+            200:
+              description: Successfully saved
+              content:
+                'application/json':
+                  schema:
+                    $ref: '#/components/schemas/Success'
+
+            401:
+              description: Unauthenticated request
+              content:
+                'application/json':
+                  schema: 
+                    $ref: '#/components/schemas/Error'
+  
+     
+    delete:
+          operationId: remove-camp
+          description: delete the camp details
+          
+          parameters: 
+            - name: Camp_Id
+              in: query
+              required: true
+              schema:
+                type : integer
+                format: int64
+                minimum: 1
+  
+   
+          
+components: 
+  schemas:
+  
+    activity:
+      type: object
+      properties:
+        action:
+          type: string
+          examples: 
+            - volunteer
+        
+        data:
+          type: object
+          properties: 
+            
+            volunteer:
+              type: object
+              properties:
+                Volunteer_Id:
+                  type: integer 
+                  examples:
+                    - 123
+                Description:
+                  type: string
+                  examples:
+                    - we are planning to camp during summer breaks
+                total_youth:
+                  type: integer 
+                  examples:
+                    - 100
+                Location:
+                  type: string
+                  examples:
+                    - Orlando
+                date:
+                  type: integer
+                  examples:
+                    - 19
+                
+                
+    Camp:
+      type: object
+      properties:
+        action:
+          type: string
+          examples: 
+            - Location
+        data:
+          type: object
+          properties:
+            Camp:
+              type: object 
+            Location:
+              type: string
+              examples: 
+                - Back Bay
+            Description:
+              type: string
+              examples:
+                - We are planning to cam in parade ground
+            Date:
+              type: integer
+              examples:
+                - 12
+            Camp_Id:
+              type: integer
+              examples:
+                - 32
+    Success:
+      type: object
+      properties:
+        code:
+          type: integer 
+          examples:
+            - 200
+        data:
+          type: object
+          properties:
+            message:
+              type: string
+              examples:
+                - successfully logged
+            accountId:
+              type: integer 
+              examples:
+                - 1294124512         
+           
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          examples:
+            - 401
+        data:
+          type: object
+          properties:
+            message:
+              type: string
+              examples:
+                - unauthorized

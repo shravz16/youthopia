@@ -1,0 +1,151 @@
+openapi: 3.1.0
+info:
+  title: The Youthopia
+  summary: The Rest Service for Youthopia.
+  version: 'v1.0'
+servers:
+  - url: http://localhost:3001
+
+paths:
+  /forums/comments:
+    post:
+      operationId: create-comments
+      description: creates comments in the forum
+      requestBody:
+        required: true
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/Comment'
+      responses:
+        200:
+          description: Successfully saved
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Success'
+
+        401:
+          description: Unauthenticated request
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Error'
+
+    put:
+      operationId: update-comment
+      description: update the comments
+      requestBody:
+        required: true
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/Comment'
+      responses:
+        200:
+          description: Successfully saved
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Success'
+
+        401:
+          description: Unauthenticated request
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Error'
+
+    get:
+      operationId: get-comment
+      description: get the comments
+      parameters:
+        - name: commentId
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+
+    delete:
+      operationId: delete-comment
+      description: delete the comments
+      parameters:
+        - name: commentId
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+
+components:
+  schemas:
+    Comment:
+      type: object
+      properties:
+        action:
+          type: string
+          examples:
+            - comment
+        id:
+          type: string
+          examples:
+            - 192.168.1.1_youth
+        data:
+          type: object
+          properties:
+            comment_data:
+              type: object
+              properties:
+                comment:
+                  type: string
+                  examples:
+                    - This is interesting!
+                date:
+                  type: string
+                  examples:
+                    - 19/03/2024
+                youthId:
+                  type: integer
+                  examples:
+                    - 11111
+                commentId:
+                  type: integer
+                  examples:
+                    - 20113
+
+    Success:
+      type: object
+      properties:
+        code:
+          type: integer
+          examples:
+            - 200
+        data:
+          type: object
+          properties:
+            message:
+              type: string
+              examples:
+                - successfully logged
+            commentId:
+              type: integer
+              examples:
+                - 1294124512
+
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          examples:
+            - 401
+        data:
+          type: object
+          properties:
+            message:
+              type: string
+              examples:
+                -

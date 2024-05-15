@@ -1,0 +1,115 @@
+openapi: 3.1.0
+info:
+  title: The Youthopia
+  summary: The Rest Service for Youthopia.
+  version: 'v1.0'
+servers:
+  - url: http://localhost:3001
+
+paths:
+  /donations:
+    post:
+      operationId: create-donations
+      description: creates donations for the youth
+      requestBody:
+        required: true
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/Donation'
+      responses:
+        200:
+          description: Successfully saved
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Success'
+
+        401:
+          description: Unauthenticated request
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Error'
+    get:
+      operationId: get-donations
+      description: get the donations
+      parameters:
+        - name: donationId
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+
+components:
+  schemas:
+    Donation:
+      type: object
+      properties:
+        action:
+          type: string
+          examples:
+            - donation
+        id:
+          type: string
+          examples:
+            - 192.168.1.1_youth
+        data:
+          type: object
+          properties:
+            type:
+              type: string
+              examples:
+                - donation
+            donation_data:
+              type: object
+              properties:
+                date:
+                  type: string
+                  examples:
+                    - 19/03/2024
+                volunteer_obj:
+                  type: object
+                  examples:
+                    - joedoe@gmail.com
+                donationId:
+                  type: integer
+                  examples:
+                    - 20113
+
+    Success:
+      type: object
+      properties:
+        code:
+          type: integer
+          examples:
+            - 200
+        data:
+          type: object
+          properties:
+            message:
+              type: string
+              examples:
+                - successfully logged
+            donationId:
+              type: integer
+              examples:
+                - 1294124512
+
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          examples:
+            - 401
+        data:
+          type: object
+          properties:
+            message:
+              type: string
+              examples:
+                -
+ 
