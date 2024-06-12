@@ -1,0 +1,42 @@
+.socialLinks {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.socialLink {
+    margin: 0 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+}
+
+.social-handles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 60%;
+}
+
+.social-handles p {
+    font-family: "Inter", sans-serif;
+    font-size: 8px;
+}
+
+#content h4 {
+    font-family: "Playfair Display", serif;
+    color: #2f52a1;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#content p {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+}
+
+#links {
+    display: flex;
+    gap: 12px;
+}

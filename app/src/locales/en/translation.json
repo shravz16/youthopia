@@ -1,0 +1,19 @@
+{
+    "userProfile.userName": "User Name",
+    "userProfile.email": "Email",
+    "userProfile.password": "Password",
+    "userProfile.age": "Age",
+    "userProfile.race": "Race",
+    "userProfile.sex": "Sex",
+    "userProfile.occupation": "Occupation",
+    "userProfile.org": "Org",
+    "userProfile.picture": "Profile Picture",
+    "userProfile.profile": "User Profile",
+    "userProfile.edit": "Edit",
+    "userProfile.save": "Save",
+    "userProfile.delete": "Delete",
+    "userNavbar.activities": "Activities & Camps",
+    "userNavbar.discussions": "Discussions",
+    "userNavbar.handn": "Health & News",
+    "userNavbar.donate": "Donations"
+}

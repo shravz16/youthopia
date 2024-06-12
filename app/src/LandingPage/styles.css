@@ -1,0 +1,541 @@
+/* Body elements of the Landing Page */
+body{
+    background-color: white;
+    max-width: 100%;
+}
+
+body,
+p, a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+h1{
+    font-family: 'Playfair Display',sans-serif;
+}
+
+/* NavBar of the Landing Page */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #0071C5;
+    color: white;
+}
+
+.logo {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-size: 1rem;
+}
+
+.nav-links .donate {
+    background-color: #FFC72C;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.nav-links .donate:hover {
+    background-color: #FFB700;
+}
+
+
+/* Hero Section Styles */
+
+.hero {
+    margin-top: 5px;
+    color: #2f52a1;
+    text-align: left;
+    padding: 200px 200px;
+    padding-bottom: 350px;
+}
+
+#main-img{
+    position: absolute;
+    top: 20%;
+    left: 63.5%;
+    width: 28%;
+    border-radius: 20px;
+}
+
+#second-empty-div{
+    width: 250px;
+    height: 250px;
+    background-color: #2f52a1;
+    top: 60%;
+    left: 35%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+.hero .empty-div{
+    width: 600px;
+    height: 250px;
+    background-color: #B4E0DF;
+    opacity: 0.7;
+    border-radius: 20px;
+    position: absolute;
+    top: 42%;
+    left: 16%;
+    z-index: -2;
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero-content h1 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    margin-bottom: 30px;
+    font-size: 1.25rem;
+    max-width: 600px;
+
+}
+
+.hero-content a{
+    width: 10%;
+
+}
+
+.donate-button {
+    text-decoration: none;
+    background-color: #2f52a1;
+    border: 2px solid inherit;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: 0.3s ease-in-out;
+}
+
+.donate-button:hover {
+    transform: scale(1.05);
+    transition: ease-in-out 300ms;
+    background-color: inherit;
+    color: #2f52a1;
+    border-radius: 0px;
+    border: 2px solid #2f52a1;
+}
+
+.transformative-section {
+    margin-top: 5px;
+    background-color: #1E3350;
+    color: white;
+    gap: 150px;
+    max-width: 100%;
+    text-align: left;
+    display: flex;
+
+
+}
+
+.content-wrapper {
+    max-width: 700px;
+
+    display: flex;
+    flex-direction: column;
+    color:aliceblue;
+    padding: 100px 0px;
+
+}
+
+
+
+.highlighted-text p {
+    font-size: 20px;
+    line-height: 25px;
+    text-align: justify;
+    color: white;
+    
+}
+
+.highlighted-text::first-letter{
+    font-size: 42px;
+}
+
+/* LearnMore section of the Landing Page */
+
+.learn-more-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #b0975d;
+    border: 2px solid inherit;
+
+    color: #fff;
+
+    padding: 15px 20px;
+    border-radius: 10px;
+
+    font-size: 16px;
+    margin-top: 30px;
+    max-width: 180px;
+    transition:  ease-in-out 0.3s;
+}
+
+.learn-more-button:hover{
+    border: 2px solid #ffffff;
+    border-radius: 0px;
+    background-color: inherit;
+    color: #ffffff;
+
+}
+
+.leadership-section {
+
+    background-color: #D7E1EA;
+    /* Assuming a white background */
+    padding: 100px 20px;
+    
+}
+
+.leadership-section h2 {
+    color: #2f52a1;
+    /* Dark text for heading */
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.leadership-intro {
+    color: #2f52a1;
+    /* Lighter text for the intro */
+    font-size: 1.05rem;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.leadership-areas {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2em;
+    gap: 15px;
+}
+
+.leadership-areas .area {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+    max-width: 575px;
+    transition: ease-out 400ms;
+    border-left: 1.5px solid #2f52a1;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 15px rgba(47, 82, 161, 0.5);
+}
+
+.leadership-areas .area:hover {
+    cursor: pointer;
+    transition: ease-in-out 400ms;
+    transform: scale(1.03);
+}
+
+
+
+.area-content{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 5px;
+}
+
+.area-content p{text-align: justify;}
+
+.leadership-areas img {
+    border-radius: 10px;
+    margin-bottom: 1em;
+    width: 200px;
+    height: auto;
+    border: 1px solid #b0975d;
+    margin-top: 10px;
+}
+
+.leadership-areas h3 {
+    color: #2f52a1;
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+}
+
+.leadership-areas p {
+    color: #2f52a1;
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+
+.campaign-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: white;
+    border: 2px solid inherit;
+    margin-left: 40%;
+    /* Yellow button color */
+    color: #2f52a1;
+    ;
+    /* Dark blue text */
+    padding: 15px 30px;
+    border-radius: 10px;
+    /* Rounded corners for the button */
+    font-size: 1.25rem;
+    transition: ease-in-out 300ms;
+
+}
+
+.campaign-button:hover {
+    background-color: inherit;
+    color: #2f52a1;
+    border: 2px solid #2f52a1;
+    border-radius: 0px;
+    transition: ease-in-out 300ms;
+
+    
+    /* Darker yellow on hover */
+    color: #2f52a1;
+}
+
+
+#acti-area img{
+    height: 250px;
+}
+
+.impact-section {
+    background-color: #2f52a1;
+    /* white background */
+    color: white;
+    /* a deep blue color for the text */
+    padding: 150px 50px;
+    /* substantial padding */
+    text-align: left;
+
+
+}
+
+.impact-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.impact-title {
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 300;
+    font-size: 42px;
+    padding-bottom: 50px;
+    color: white;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3-column layout for images */
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.impact-image {
+    width: 100%;
+    /* responsive images */
+    border-radius: 5px;
+    /* slight rounding of corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* subtle shadow for depth */
+}
+
+.impact-text p {
+    font-size: 1rem;
+    /* standard size for the paragraph */
+    margin-bottom: 1rem;
+    color: white;
+    /* deep blue for readability */
+    text-align: left;
+    /* align to the left for the paragraph text */
+    max-width: 800px;
+    /* max-width to control line length */
+    margin-left: auto;
+    /* centering the text block */
+    margin-right: auto;
+}
+
+#go-to-discussion-link a{
+    text-decoration: none;
+    color: #2f52a1;
+    background-color: #fff;
+    width: 150px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #2f52a1;
+    transition: ease-in-out 300ms;
+}
+
+#go-to-discussion-link a:hover{
+    border-radius: 0px;
+    border: 2px solid #fff;
+    transition: ease-in-out 300ms;
+    background-color: inherit;
+    color: #fff;
+
+}
+
+
+
+/* Add responsive adjustments as necessary */
+
+@media (max-width: 768px) {
+    .impact-content {
+        flex-direction: column;
+    }
+    .impact-text,
+    .impact-images {
+        width: 100%;
+    }
+}
+
+.testimonial-section {
+    background-color: white;
+    /* Light grey background */
+    padding: 50px 20px;
+}
+
+.testimonial-container {
+    max-width: 800px;
+    /* or whatever maximum width you prefer */
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+
+.testimonial-quote {
+    font-style: italic;
+    color: #2f52a1;
+    /* Dark grey text color */
+    padding: 0 20px;
+    margin-bottom: 30px;
+    font-size: 1.25rem;
+    /* Larger text size for quotes */
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #2f52a1;
+    margin-bottom: 30px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    /* Dots color */
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.active {
+    background-color: #717171;
+    /* Active dot color */
+}
+
+
+/* Footer Section of the Landing Page */
+
+.cta-section {
+    text-align: center;
+    background-color: #2f52a1;
+}
+
+.cta-container {
+    display: flex;
+    justify-content: space-evenly;
+
+    padding: 50px;
+}
+
+.cta-card {
+    color: white;
+    border-radius: 10px;
+    /* Rounded corners for the CTA cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+.cta-card a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    padding: 30px;
+    background-color: #f0c050;
+    border-radius: 10px;
+    transition: ease-in-out 300ms;
+    border: 2px solid inherit;
+    /* Large, prominent font size for CTA titles */
+}
+
+.cta-card a:hover{
+    border-radius: 0px;
+    border: 2px solid #f0c050;
+    background-color: #2f52a1;
+    color: #fff;
+    transition: ease-in-out 300ms;
+}
+.signup-prompt{
+    padding-bottom: 20px;
+}
+
+.signup-prompt p {
+    color: white;
+    /* Dark text for readability */
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+    /* Larger font size for signup prompt */
+}
+
+.signup-button {
+    display: inline-block;
+    background-color: white;
+    /* Orange button color */
+    color: #2f52a1;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    /* Fully rounded corners for button */
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+}

@@ -1,0 +1,102 @@
+.HealthPage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.HealthHeader {
+    background-color: #0072ce;
+    color: #fff;
+    padding: 1rem;
+}
+
+.healthButton {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+.HealthHeader__Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.HealthHeader__Logo img {
+    height: 40px;
+}
+
+.HealthHeader input {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    width: 300px;
+}
+
+.SortButton {
+    background-color: #fff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.HealthContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.HealthArticles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+}
+
+.HealthArticle {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.HealthArticle img {
+    max-width: 100%;
+}
+
+.ExpandedView {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ExpandedContent {
+    background-color: #fff;
+    padding: 2rem;
+    max-width: 800px;
+    position: relative;
+}

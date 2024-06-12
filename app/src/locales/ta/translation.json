@@ -1,0 +1,19 @@
+{
+    "userProfile.userName": "பயனர் பெயர்",
+    "userProfile.email": "மின்னஞ்சல்",
+    "userProfile.password": "கடவுச்சொல்",
+    "userProfile.age": "வயது",
+    "userProfile.race": "இனம்",
+    "userProfile.sex": "பலினம்",
+    "userProfile.occupation": "தொழில்",
+    "userProfile.org": "அமைப்பு",
+    "userProfile.picture": "சுயவிவர படம்",
+    "userProfile.profile": "பயனர் சுயவிவரம்",
+    "userProfile.edit": "தொகு",
+    "userProfile.save": "சேமிக்க",
+    "userProfile.delete": "அழி",
+    "userNavbar.activities": "நடவடிக்கைகள் & முகாம்கள்",
+    "userNavbar.discussions": "வவதங்கள்",
+    "userNavbar.handn": "உடல்நலம் & செய்திகள்",
+    "userNavbar.donate": "நன்கொடைகள்"
+}

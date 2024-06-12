@@ -1,0 +1,44 @@
+/* Camp title styling */
+.camp-title {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 24px;
+    color: #2f52a1;
+}
+
+/* Camp text styling */
+.camp-text {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    margin-top: 2%;
+}
+
+/* Close button styling */
+.close {
+    color: #2f52a1;
+    font-size: larger;
+}
+
+/* Register button styling */
+#Register-camps {
+    max-width: 200px;
+    margin-left: 30%;
+    background-color: #2f52a1;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 5%;
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+    border: 2px solid white;
+    transition: ease-in 300ms;
+}
+
+/* Register button hover styling */
+#Register-camps:hover {
+    cursor: pointer;
+    border-radius: 0px;
+    color: #2f52a1;
+    background-color: inherit;
+    border: 2px solid #2f52a1;
+    transition: ease-out 300ms;
+}

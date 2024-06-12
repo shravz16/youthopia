@@ -1,0 +1,57 @@
+.description input {
+    color: #2f52a1;
+    width: 250px;
+    background-color: inherit;
+    border: 1px solid #2f52a1;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.description>h2 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 32px;
+    color: #2f52a1;
+    margin-bottom: 5px;
+}
+
+#Stripe-title{
+    text-align: left;
+}
+
+.description>p {
+    margin-bottom: 8%;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    margin-top: 14%;
+    margin-bottom: 20%;
+    margin-left: 10%;
+}
+
+.donation-area {
+    display: flex;
+    gap: 10px;
+}
+
+.donation-area button {
+    background-color: inherit;
+    color: #2f52a1;
+    border: 2px solid #2f52a1;
+    font-family: "Inter", sans-serif;
+    border-radius: 15px;
+    padding: 10px;
+    transition: ease-in-out 200ms;
+}
+
+.donation-area button:hover {
+    background-color: #2f52a1;
+    border: 2px solid white;
+    cursor: pointer;
+    padding: 10px;
+    color: #fff;
+    transition: ease-in-out 200ms;
+}

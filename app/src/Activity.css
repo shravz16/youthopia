@@ -1,0 +1,159 @@
+/* Body styling */
+/* body {
+    margin: 0% 5% 0% 3%;
+} */
+
+/* Row of cards styling */
+.cards-row {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    max-width: 250px;
+}
+
+/* Subtitle styling */
+.subtitle {
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Container holding all cards */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Individual card styling */
+.activity-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 300px; /* fixed width, you can make it responsive as needed */
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* If images are included */
+.card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Content inside the card */
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Events section styling */
+.events {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+/* Action button styling */
+.action {
+    margin-left: 18%;
+    margin-top: 25%;
+}
+
+/* Body font family */
+.activity-body {
+    font-family: "Inter", sans-serif;
+}
+
+/* Main title styling */
+.main-title {
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #2f52a1;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+/* Navigation item styling */
+.nav-item {
+    text-transform: uppercase;
+}
+
+/* Button container styling */
+.btn-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Action button styling */
+.btn-action {
+    margin: auto; /* Center horizontally */
+    padding: 6px 10px;
+    background-color: #2f52a1;
+    font-family: "Inter", sans-serif;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: ease-in-out 300ms;
+    font-size: 14px;
+    width: 120px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Action link styling */
+.action-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.action-link:hover {
+    color: #2f52a1;
+    text-decoration: none;
+}
+
+/* Action button hover and active styling */
+.btn-action:hover,
+.btn-action:active {
+    background-color: inherit;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: 2px solid #2f52a1;
+    border-radius: 0px;
+    color: white;
+}

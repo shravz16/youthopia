@@ -1,0 +1,153 @@
+/* Global styles for the body */
+
+body {
+    box-sizing: border-box;
+    margin: 0px;
+    background-color: aliceblue;
+}
+
+
+/* Title styling */
+
+.title {
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #2f52a1;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+
+/* Content container styling */
+
+.content-container {
+    margin: 18% 5% 0% 20%;
+}
+
+
+/* Subtitle styling */
+
+.subtitle {
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
+/* Description list styling */
+
+.desc {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    list-style-type: none;
+}
+
+
+/* Unordered list within .desc styling */
+
+.desc ul {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    list-style-type: none;
+    padding: 0px;
+}
+
+
+/* Navigation item styling */
+
+.nav-item {
+    background-color: #2f52a1;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 2px solid white;
+    transition: ease-in-out 300ms;
+}
+
+
+/* Action container styling */
+
+.action {
+    display: flex;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    margin-top: 6%;
+}
+
+
+/* Hover effect for .nav-item */
+
+.nav-item:hover {
+    border-radius: 0px;
+    background: inherit;
+    border: 2px solid #2f52a1;
+    color: #2f52a1;
+    transition: ease-in-out 300ms;
+    cursor: pointer;
+}
+
+
+/* Additional styling for specific elements */
+
+
+/* Styling for #camps-link */
+
+#camps-link {
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+
+/* Body margin and max-width */
+
+.body {
+    margin-bottom: 1%;
+    max-width: 500px;
+}
+
+
+/* Styling for image stack */
+
+.image-stack {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 500px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+/* Styling for images within .image-stack */
+
+.image-stack img {
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+}
+
+
+/* Styling for the image container */
+
+.image-container {
+    margin-top: 18%;
+}
+
+
+/* Main section flexbox alignment */
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Flexbox styles for .camps-img and .activity-img */
+
+.camps-img,
+.activity-img {
+    display: flex;
+    gap: 10px;
+}

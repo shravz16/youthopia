@@ -1,0 +1,233 @@
+/* General Styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f7f8fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styles */
+.SkillsHeader {
+  background-color: #1c5baf;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.HeaderContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.SkillsHeader h1 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  margin-right: 20px;
+}
+
+.SkillsHeader input {
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+/* Content Styles */
+.SkillsContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 40px 20px;
+  min-height: calc(100vh - 147px); /* Adjust the height as needed */
+}
+
+.SkillCard {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+}
+
+.SkillCard::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #1c5baf;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.SkillCard:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.SkillCard:hover::after {
+  transform: scaleX(1);
+}
+
+.SkillCard img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.SkillCard h2 {
+  color: #1c5baf;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.SkillCard p {
+  color: #6a6f73;
+  font-size: 0.9rem;
+}
+
+/* Expanded View Styles */
+.ExpandedView {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.ExpandedContent {
+  background-color: #fff;
+  padding: 30px;
+  max-width: 600px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+.CloseButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #6a6f73;
+}
+
+.ExpandedContent img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.ExpandedContent h3 {
+  color: #1c5baf;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.ExpandedContent p {
+  color: #6a6f73;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.TopicsList {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.TopicsList h4 {
+  color: #1c5baf;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.TopicsList ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.TopicsList li {
+  color: #6a6f73;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.EnrollButton {
+  background-color: #1c5baf;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 3px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.EnrollButton:hover {
+  background-color: #174585;
+}
+
+/* Footer Styles */
+.Footer {
+  background-color: #1c1d1f;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.Footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .SkillsContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .SkillsContent {
+    grid-template-columns: 1fr;
+
+  
+    }
+
+
+  }
+  .SkillsContent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 40px 20px;
+    min-height: calc(100vh - 147px); /* Adjust the height as needed */
+  }

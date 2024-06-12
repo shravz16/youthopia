@@ -1,0 +1,88 @@
+/* Overall section and background styles */
+.contact {
+    background-color: #f9f9f9; /* Light grey background */
+    padding: 40px;
+    display: flex;
+    justify-content: center; /* Center the form container horizontally */
+    align-items: center; /* Center the form container vertically */
+    min-height: 100vh; /* Full screen height */
+}
+
+/* Container for the mail section */
+.mail {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px; /* Max width for the form */
+}
+
+/* Styling for the title of the form */
+.create-activity-title {
+    text-align: center;
+    font-family: "Playfair Display",sans-serif;
+    font-size: 24px;
+    color: #2f52a1;
+    margin-bottom: 20px;
+}
+
+/* Form specific styles */
+.form {
+    display: grid;
+    gap: 16px; /* Consistent spacing between form elements */
+}
+
+/* Form fields grouping */
+.form-fields {
+    margin-bottom: 10px;
+}
+
+/* Labels styling */
+.form label {
+    font-size: 14px;
+    color: #555;
+    font-family: "Inter", sans-serif;
+    display: block; /* Make labels block to have their own line */
+}
+
+/* Input fields styling */
+.form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #2f52a1;
+    border-radius: 10px;
+
+}
+
+.form input[type="text"]:focus {
+    border-color: #0056b3; /* Highlight border on focus */
+    outline: none; /* Remove default focus outline */
+}
+
+/* Button styling */
+.btn-form-activity {
+    width: 50%;
+    margin-left: 23%;
+    padding: 10px 15px;
+    background-color: #2f52a1; 
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: ease-in-out 300ms;
+}
+
+.btn-form-activity:hover {
+    background-color: inherit;
+    color: #2f52a1;
+    border: 2px solid #2f52a1;
+    border-radius: 0px;
+
+     /* Darker shade on hover */
+}
+
+/* Responsive adjustments */
+
