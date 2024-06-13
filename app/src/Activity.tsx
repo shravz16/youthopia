@@ -24,7 +24,7 @@ const Activity: React.FC = () => {
      */
     const fetchActivities = async () => {
         try {
-            const response = await fetch('http://localhost:3000/activitymodels'); 
+            const response = await fetch('http://3.22.180.190:3000/activitymodels'); 
             const data = await response.json();
             
             setActivities(data.data);

@@ -31,7 +31,7 @@ function ResponsiveAppBar() {
           setPhoto(sessionStorage.getItem('googleImg'))
           return;
         }
-        const respo = await fetch('http://localhost:3000/profile/photos'+"/"+sessionStorage.getItem("authToken")); // Adjust the API endpoint
+        const respo = await fetch('http://3.22.180.190:3000/profile/photos'+"/"+sessionStorage.getItem("authToken")); // Adjust the API endpoint
         const respos = await respo.blob();
         console.log(respos)
      

@@ -28,7 +28,7 @@ const Camp: React.FC = () => {
     // Function to fetch camps data from the server
     const fetchCamp = async () => {
         try {
-            const response = await fetch('http://localhost:3000/campmodels'); 
+            const response = await fetch('http://3.22.180.190:3000/campmodels'); 
             const data = await response.json();
             console.log(data)
             setCamp(data.data);

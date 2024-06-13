@@ -64,7 +64,7 @@ const CreateActivity: React.FC = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:3000/activitymodels/', options);
+            const response = await fetch('http://3.22.180.190:3000/activitymodels/', options);
             const resp = await response.json();
             console.log(resp);
             if (response.status === 200) {

@@ -13,7 +13,7 @@ function Discussions() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/forums');
+        const response = await axios.get('http://3.22.180.190:3000/forums');
         setPosts(response.data.data);
         console.log(response,"setting posts")
         setDisplayedPosts(response.data.data); // Initialize displayed posts

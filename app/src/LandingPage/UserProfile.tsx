@@ -21,7 +21,7 @@ function UserProfile({userDetails, userName,email,password,age,race,sex,occupati
       }
     };
 
-    const response = await fetch('http://localhost:3000/accounts/'+sessionStorage.getItem("type").toLowerCase()+'/'+sessionStorage.getItem('authToken'),options)
+    const response = await fetch('http://3.22.180.190:3000/accounts/'+sessionStorage.getItem("type").toLowerCase()+'/'+sessionStorage.getItem('authToken'),options)
     const resp=await response.json()
     sessionStorage.removeItem('authToken')
     sessionStorage.removeItem('type')
@@ -36,7 +36,7 @@ function UserProfile({userDetails, userName,email,password,age,race,sex,occupati
       formData.append('file', photo);
 
       const authKey = sessionStorage.getItem("authToken");
-      const result = await axios.post('http://localhost:3000/upload-pics/' + authKey, formData, { headers: { 'Content-Type': 'multipart/form-data' } })
+      const result = await axios.post('http://3.22.180.190:3000/upload-pics/' + authKey, formData, { headers: { 'Content-Type': 'multipart/form-data' } })
         .then()
         .catch(e => { console.log(e) });
     }
@@ -69,7 +69,7 @@ function UserProfile({userDetails, userName,email,password,age,race,sex,occupati
          },
          body: JSON.stringify(forms)
      }
-     const response = await fetch('http://localhost:3000/accounts/'+sessionStorage.getItem("type").toLowerCase()+'/'+sessionStorage.getItem('authToken'),options)
+     const response = await fetch('http://3.22.180.190:3000/accounts/'+sessionStorage.getItem("type").toLowerCase()+'/'+sessionStorage.getItem('authToken'),options)
      const resp=await response.json()
   };
 
@@ -90,7 +90,7 @@ function UserProfile({userDetails, userName,email,password,age,race,sex,occupati
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await fetch('http://localhost:3000/accounts/' + sessionStorage.getItem("type") + "/" + sessionStorage.getItem("authToken"));
+        const response = await fetch('http://3.22.180.190:3000/accounts/' + sessionStorage.getItem("type") + "/" + sessionStorage.getItem("authToken"));
         if (!response.ok) {
           throw new Error('Failed to fetch user details');
         }
@@ -111,7 +111,7 @@ function UserProfile({userDetails, userName,email,password,age,race,sex,occupati
           setUserPhoto(sessionStorage.getItem('googleImg'))
           return;
         }
-        const respo = await fetch('http://localhost:3000/profile/photos' + "/" + sessionStorage.getItem("authToken"));
+        const respo = await fetch('http://3.22.180.190:3000/profile/photos' + "/" + sessionStorage.getItem("authToken"));
         const respos = await respo.blob();
 
         const reader = new FileReader();

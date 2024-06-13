@@ -18,7 +18,7 @@ const NewsPage: React.FC = () => {
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
   React.useEffect(() => {
     const fetchUserData = async () => {
-      const getNews = await axios.get('http://localhost:3000/newsmodel').then().catch(e=>{console.log(e)});
+      const getNews = await axios.get('http://3.22.180.190:3000/newsmodel').then().catch(e=>{console.log(e)});
       console.log(getNews)
       setFilteredArticles(getNews.data)
     };

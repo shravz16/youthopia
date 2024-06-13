@@ -19,7 +19,7 @@ function Post({ post, onDelete }) {
   const [comment,setComment] = useState([]);
 
   const handleLikeClick = async () => {
-    const response = await axios.put('http://localhost:3000/forums/'+p.post_id, {
+    const response = await axios.put('http://3.22.180.190:3000/forums/'+p.post_id, {
      likes:p.likes+1
     });
     const resp=await response
@@ -41,7 +41,7 @@ const handleComment =async () =>{
     },
     body: JSON.stringify(data)
 }
-  const resp=await fetch('http://localhost:3000/comment',options)
+  const resp=await fetch('http://3.22.180.190:3000/comment',options)
   const comments=p.comment;
   comments.push(data)
   setP(prev=>({

@@ -47,7 +47,7 @@ function LoginSignup(){
     }
     async function  checkLogin() {
         if(type==='Youth'){
-        const response = await fetch('http://localhost:3000/accounts/youth?email='+form.email+'&password='+form.password+'&type='+(type.toLowerCase()));
+        const response = await fetch('http://3.22.180.190:3000/accounts/youth?email='+form.email+'&password='+form.password+'&type='+(type.toLowerCase()));
         const resp=await response.json();
         
         if(resp.data.length>0){
@@ -66,7 +66,7 @@ function LoginSignup(){
 
     }
     else{
-        const response = await fetch('http://localhost:3000/accounts/volunteer?email='+form.email+'&password='+form.password+'&type='+(type.toLowerCase()));
+        const response = await fetch('http://3.22.180.190:3000/accounts/volunteer?email='+form.email+'&password='+form.password+'&type='+(type.toLowerCase()));
         const resp=await response.json();
         if(resp.data.length>0){
             setAuthenticate(resp.data[0].volunteerId)
@@ -109,7 +109,7 @@ function LoginSignup(){
             body: JSON.stringify(forms)
         }
         
-        const response = await fetch('http://localhost:3000/accounts/'+type.toLowerCase(),options)
+        const response = await fetch('http://3.22.180.190:3000/accounts/'+type.toLowerCase(),options)
         const resp=await response.json()
         if(resp.code==200){
 
@@ -171,7 +171,7 @@ function LoginSignup(){
            };
            reader.readAsDataURL(blob);
 
-           const response = await fetch('http://localhost:3000/accounts/'+type.toLowerCase(),options)
+           const response = await fetch('http://3.22.180.190:3000/accounts/'+type.toLowerCase(),options)
            const resp=await response.json()
 
            if(resp.code==200){
@@ -187,7 +187,7 @@ function LoginSignup(){
                  formData.append('file', picBlob);
            
                  const authKey = sessionStorage.getItem("authToken");
-                 const result = await axios.post('http://localhost:3000/upload-pics/' + authKey, formData, { headers: { 'Content-Type': 'multipart/form-data' } })
+                 const result = await axios.post('http://3.22.180.190:3000/upload-pics/' + authKey, formData, { headers: { 'Content-Type': 'multipart/form-data' } })
                    .then()
                    .catch(e => { console.log(e) });
                }

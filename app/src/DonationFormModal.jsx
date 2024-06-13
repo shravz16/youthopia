@@ -21,7 +21,7 @@ function DonationFormModal({ onClose }) {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await fetch('http://localhost:3000/donations/offerings', {
+            const response = await fetch('http://3.22.180.190:3000/donations/offerings', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

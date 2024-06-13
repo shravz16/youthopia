@@ -9,7 +9,7 @@ function CreatePostForm({ posts,setPosts,onCreate }) {
 
   const handleCreatePost = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/forums', {
+      const response = await axios.post('http://3.22.180.190:3000/forums', {
         title,
         likes:0,
         youth:JSON.parse(sessionStorage.getItem("user")),
